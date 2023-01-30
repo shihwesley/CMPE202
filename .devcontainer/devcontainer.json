@@ -5,6 +5,7 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"postCreateCommand": "java -version",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -12,6 +13,13 @@
 				"vscjava.vscode-java-pack"
 			]
 		}
+	},
+	"remoteUser": "root",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/maven-sdkman:2": {},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/git-lfs:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
