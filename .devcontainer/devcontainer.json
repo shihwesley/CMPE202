@@ -31,7 +31,11 @@
 			"settings": {},
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
-				"GitHub.copilot"
+				"GitHub.copilot",
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-spring-initializr",
+				"vscjava.vscode-spring-boot-dashboard",
+				"redhat.java"
 			]
 		}
 	}
