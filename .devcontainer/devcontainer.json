@@ -11,7 +11,8 @@
 			"extensions": [
 				"GitHub.copilot",
 				"vscjava.vscode-java-pack",
-				"georgewfraser.vscode-javac"
+				"georgewfraser.vscode-javac",
+				"tushortz.java-imports-snippets"
 			]
 		}
 	},
