@@ -10,7 +10,8 @@
 		"vscode": {
 			"extensions": [
 				"GitHub.copilot",
-				"vscjava.vscode-java-pack"
+				"vscjava.vscode-java-pack",
+				"georgewfraser.vscode-javac"
 			]
 		}
 	},
