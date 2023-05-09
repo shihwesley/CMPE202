@@ -24,12 +24,10 @@ public class CsvFileReader implements IFileReader {
                 String line = scanner.nextLine();
                 String[] data = line.split(",");
                 String cardNum = data[0];
-                //String expirationDate = data[1];
-                //String nameOfCardHolder = data[3];
+                String expirationDate = data[1];
                 CCFactory Factory = CCFactoryUtil.getFactory(cardNum);
                 CreditCard cc = Factory.createCC(cardNum);
-                //cc.setCardExpirationDate(expirationDate);
-                //cc.setNameOfCardHolder(nameOfCardHolder);
+                cc.setCardExpirationDate(expirationDate);
                 creditcards.add(cc);
             }
         }

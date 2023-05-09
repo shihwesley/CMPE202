@@ -17,7 +17,7 @@
             "mainClass": "com.cmpe202.CreditCardApp",
             "projectName": "creditcard",
             "classpath": "lib/*",
-            "args": ["input_file.xml"]
+            "args": ["input_file-1.json"]
         }
     ]
 }

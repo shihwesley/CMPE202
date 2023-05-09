@@ -30,25 +30,24 @@
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
       <version>2.15.0</version>
-      <scope>system</scope>
-      <systemPath>${basedir}/lib/jackson-core-2.15.0.jar</systemPath>
+      <!-- <scope>system</scope>
+      <systemPath>${basedir}/lib/jackson-core-2.15.0.jar</systemPath> -->
     </dependency>
-
-<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>2.15.0</version>
-      <scope>system</scope>
-      <systemPath>${basedir}/lib/jackson-databind-2.15.0.jar</systemPath>
+      <!-- <scope>system</scope>
+      <systemPath>${basedir}/lib/jackson-databind-2.15.0.jar</systemPath> -->
     </dependency>
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
       <version>2.15.0</version>
-      <scope>system</scope>
-      <systemPath>${basedir}/lib/jackson-annotations-2.15.0.jar</systemPath>
+      <!-- <scope>system</scope>
+      <systemPath>${basedir}/lib/jackson-annotations-2.15.0.jar</systemPath> -->
     </dependency>
 
   </dependencies>
@@ -73,6 +72,12 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
+          <configuration>
+            <classpathScope>test</classpathScope>
+              <additionalClasspathElements>
+                <additionalClasspathElement>target/classes/com/cmpe202/</additionalClasspathElement>
+              </additionalClasspathElements>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -102,6 +107,14 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.1.0</version>
+          <configuration>
+            <mainClass>com.cmpe202.CreditCardApp</mainClass>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>

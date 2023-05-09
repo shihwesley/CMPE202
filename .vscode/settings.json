@@ -1,4 +1,18 @@
 {
     "java.debug.settings.onBuildFailureProceed": true,
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.testconfig": {
+        "name": "JUnit",
+        "workingDirectory": "${workspaceFolder}",
+        "classpath": [
+            "${workspaceFolder}/target/classes",
+            "${workspaceFolder}/target/test-classes"
+        ],
+        "sources": [
+            "${workspaceFolder}/src/main/java",
+            "${workspaceFolder}/src/test/java"
+        ],
+        "testRunner": "junit"
+    },
+    "java.testmethod": "testReadCsv"
 }
